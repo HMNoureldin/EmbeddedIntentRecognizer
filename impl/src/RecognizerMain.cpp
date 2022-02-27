@@ -1,43 +1,27 @@
 #include "../inc/CommandLineSingleton.hpp"
-#include "../inc/IntentFactory.hpp"
-#include "../inc/Intent.hpp"
-
-
+#include "../inc/IntentRecognizer.hpp"
+#include <memory>
 
 
 int main(){
 
     CommandLineSingleton::Instance().Clear();
     
-    std::cout << "****** Embedded Intent Recognizer ******" << std::endl << std::endl;	
-    std::cout << ">> Please insert your inquiry ?? " << std::endl<< std::endl;
+    CommandLineSingleton::Instance().MsgDisplay("****** Embedded Intent Recognizer ****** \n");
+    CommandLineSingleton::Instance().MsgDisplay(">> Please insert your inquiry ?? \n");
 
     std:: string input;
+    std:: string intent;
+    std::unique_ptr<IntentRecognizer> recognizer = std::make_unique<IntentRecognizer>();
 
 	do {
         input = CommandLineSingleton::Instance().InputFromUser();
-		
-        if (std::regex_search(input, std::regex("weather"))){
-            auto intent = IntentFactory::create(IntentType::WEATHER);
-            intent->Set(input);
-            CommandLineSingleton::Instance().MsgDisplay(intent->Get());
-
-        }	
-		else if (std::regex_search(input, std::regex("fact"))){
-            auto intent = IntentFactory::create(IntentType::FACT);
-            intent->Set(input);
-            CommandLineSingleton::Instance().MsgDisplay(intent->Get());
-
-        }
-		else if (std::regex_search(input, std::regex("exit"))){
-			CommandLineSingleton::Instance().MsgDisplay("Exit");
-        }
-		else{
-
-            CommandLineSingleton::Instance().MsgDisplay("Unknown Intent");
-        }
+        intent = recognizer->GetIntent(input);
+        CommandLineSingleton::Instance().MsgDisplay(intent);
 
 	} while (input != "exit");
+
+    CommandLineSingleton::Instance().MsgDisplay("Goodbye!!\n");
 
     return 0;
 }

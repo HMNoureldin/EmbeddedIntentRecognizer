@@ -11,10 +11,10 @@ namespace Cmd{
 }
 
 namespace Intents {
-        const std::string weather_intent      = "Get Weather";
-        const std::string weather_intent_city = "Get Weather City";
-        const std::string fact_intent         = "Get Fact";
-        const std::string unknown_intent      = "Unknown Intent";
+        const std::string weather_intent      = "Intent: Get Weather";
+        const std::string weather_intent_city = "Intent: Get Weather City";
+        const std::string fact_intent         = "Intent: Get Fact";
+        const std::string unknown_intent      = "Intent: Unknown Intent";
     }
 
 #endif /* _DEFS_H_ */
