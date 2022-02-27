@@ -1,10 +1,8 @@
 
 #include "../inc/CommandLineSingleton.hpp"
+#include "../inc/defs.hpp"
+#include <algorithm>
 
-
-namespace {
-    const std::string clear_cmd = "\033[2J\033[1;1H";
-}
 
 
 CommandLineSingleton & CommandLineSingleton::Instance() {
@@ -17,17 +15,19 @@ CommandLineSingleton & CommandLineSingleton::Instance() {
 std::string CommandLineSingleton::InputFromUser() const {
     std::string input;
     std::getline(std::cin, input);
+    // convert the input line to lower case for intent recognization check
+	transform(input.begin(), input.end(), input.begin(), ::tolower);
     return input;
 }
 
 
 void CommandLineSingleton::MsgDisplay(const std::string& message) const {
-    std::cout<< message.c_str() << std::endl;
+    std::cout<< "Intent: " << message.c_str() << std::endl;
 }
 
 
 void CommandLineSingleton::Clear() const {
-    std::cout<< clear_cmd; 
+    std::cout<< Cmd::clear_cmd; 
 }
 
 
