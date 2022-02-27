@@ -3,8 +3,9 @@
 
 void WeatherIntent::Set(const std::string &input)
 {
-    if (regex_search(input, regex("weather")) && regex_search(input, regex("in")))
+    if (std::regex_search(input, std::regex("weather")) && 
+	    std::regex_search(input, std::regex("in")))
 			m_intent = Intents::weather_intent_city;
-	else if (regex_search(input, regex("weather")))
+	else if (std::regex_search(input, std::regex("weather")))
 			m_intent = Intents::weather_intent;
 }

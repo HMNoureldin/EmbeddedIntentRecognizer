@@ -1,7 +1,9 @@
 #ifndef _DEFS_H_
 #define _DEFS_H_
 
-enum IntentType { NONE, WEATHER, FACT}
+#include<string>
+
+enum IntentType { NONE, WEATHER, FACT};
 
 
 namespace Cmd{

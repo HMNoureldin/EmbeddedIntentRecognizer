@@ -16,7 +16,7 @@ class IntentFactory final {
         IntentFactory& operator=(const  IntentFactory&) = delete;
         IntentFactory& operator=( IntentFactory&&) = delete;
 		// Factory Method
-		static std::unique_ptr<Intent> create(const Intents&);
+		static std::unique_ptr<Intent> create(const IntentType&);
         
 };
 
