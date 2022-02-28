@@ -1,8 +1,13 @@
-#include "../inc/IntentRecognizer.hpp"
+#include "../inc/IntentRecognizerSingleton.hpp"
 #include <algorithm>
 
+IntentRecognizerSingleton & IntentRecognizerSingleton::Instance() {
+    static IntentRecognizerSingleton instance;
+    return instance;
 
-std::string IntentRecognizer::GetIntent(std::string& input) const{
+}
+
+std::string IntentRecognizerSingleton::GetIntent(std::string& input) const{
 
     // convert the input line to lower case for intent recognization check
 	transform(input.begin(), input.end(), input.begin(), ::tolower);

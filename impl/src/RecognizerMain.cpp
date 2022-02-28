@@ -1,5 +1,5 @@
 #include "../inc/CommandLineSingleton.hpp"
-#include "../inc/IntentRecognizer.hpp"
+#include "../inc/IntentRecognizerSingleton.hpp"
 #include <memory>
 
 
@@ -12,11 +12,10 @@ int main(){
 
     std:: string input;
     std:: string intent;
-    std::unique_ptr<IntentRecognizer> recognizer = std::make_unique<IntentRecognizer>();
 
 	do {
         input = CommandLineSingleton::Instance().InputFromUser();
-        intent = recognizer->GetIntent(input);
+        intent = IntentRecognizerSingleton::Instance().GetIntent(input);
         CommandLineSingleton::Instance().MsgDisplay(intent);
 
 	} while (input != "exit");
