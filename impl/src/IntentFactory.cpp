@@ -20,5 +20,5 @@ std::unique_ptr<Intent> IntentFactory::create(const IntentType& type) {
 			break;
 		}
 	}
-	return m_intent;
+	return std::move(m_intent);
 }
