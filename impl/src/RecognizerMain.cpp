@@ -7,9 +7,9 @@
  */
 
 
-#include "../inc/CommandLineSingleton.hpp"
-#include "../inc/IntentRecognizerSingleton.hpp"
-#include "../inc/defs.hpp"
+#include "CommandLineSingleton.hpp"
+#include "IntentRecognizerSingleton.hpp"
+#include "defs.hpp"
 #include <memory>
 #include <optional>
 

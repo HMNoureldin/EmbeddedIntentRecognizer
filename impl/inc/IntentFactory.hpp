@@ -10,8 +10,8 @@
 #ifndef _INTENTFACTORY_H_
 #define _INTENTFACTORY_H_
 
-#include "../inc/Intent.hpp"
-#include "../inc/defs.hpp"
+#include "Intent.hpp"
+#include "defs.hpp"
 #include <memory> 
 
 

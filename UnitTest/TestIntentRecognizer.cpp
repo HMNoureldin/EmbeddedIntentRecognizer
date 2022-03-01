@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include "../impl/inc/IntentRecognizerSingleton.hpp"
-#include "../impl/inc/defs.hpp"
+#include "IntentRecognizerSingleton.hpp"
+#include "defs.hpp"
 #include <memory>
 #include <optional>
 

@@ -7,9 +7,9 @@
  */
 
 
-#include "../inc/IntentFactory.hpp"
-#include "../inc/WeatherIntent.hpp"
-#include "../inc/FactIntent.hpp"
+#include "IntentFactory.hpp"
+#include "WeatherIntent.hpp"
+#include "FactIntent.hpp"
 
 /**
  * Generate Intent object depending on the type inserted by the user.

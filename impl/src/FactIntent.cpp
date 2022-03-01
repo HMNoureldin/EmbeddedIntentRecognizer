@@ -6,8 +6,8 @@
  *  @author Hesham Noureldin
  */
 
-#include "../inc/FactIntent.hpp"
-#include "../inc/defs.hpp"
+#include "FactIntent.hpp"
+#include "defs.hpp"
 
 /**
  * Set Fact Intent String depending on the user input.

@@ -9,8 +9,8 @@
 
 
 
-#include "../inc/CommandLineSingleton.hpp"
-#include "../inc/defs.hpp"
+#include "CommandLineSingleton.hpp"
+#include "defs.hpp"
 
 
 /**

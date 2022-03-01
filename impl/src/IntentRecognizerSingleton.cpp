@@ -8,7 +8,7 @@
  */
 
 
-#include "../inc/IntentRecognizerSingleton.hpp"
+#include "IntentRecognizerSingleton.hpp"
 #include <algorithm>
 
 /**

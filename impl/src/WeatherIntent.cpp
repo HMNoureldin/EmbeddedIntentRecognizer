@@ -6,8 +6,8 @@
  *  @author Hesham Noureldin
  */
 
-#include "../inc/WeatherIntent.hpp"
-#include "../inc/defs.hpp"
+#include "WeatherIntent.hpp"
+#include "defs.hpp"
 
 /**
  * Set Weather Intent String depending on the user input.
