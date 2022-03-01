@@ -4,7 +4,15 @@ project(example VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(IntentRecognizer impl/src/RecognizerMain.cpp impl/src/CommandLineSingleton.cpp impl/src/IntentFactory.cpp impl/src/WeatherIntent.cpp impl/src/FactIntent.cpp impl/src/IntentRecognizerSingleton.cpp)
+set(SRC_FILES 
+    impl/src/RecognizerMain.cpp
+    impl/src/CommandLineSingleton.cpp 
+    impl/src/IntentFactory.cpp
+    impl/src/WeatherIntent.cpp
+    impl/src/FactIntent.cpp
+    impl/src/IntentRecognizerSingleton.cpp)
+
+add_executable(IntentRecognizer ${SRC_FILES})
 target_include_directories(IntentRecognizer PRIVATE impl/inc/)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS -std=c++17)
