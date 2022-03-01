@@ -1,7 +1,22 @@
+/** @file IntentFactory.cpp
+ *  @brief Generate intent object.
+ *
+ *  Function definitions for Generate intent object corresponds to user input.
+ *
+ *  @author Hesham Noureldin
+ */
+
+
 #include "../inc/IntentFactory.hpp"
 #include "../inc/WeatherIntent.hpp"
 #include "../inc/FactIntent.hpp"
 
+/**
+ * Generate Intent object depending on the type inserted by the user.
+ *
+ * @param type Intent type inserted by the user.
+ * @return Intent Object corresponding to the type.
+ */
 
 std::unique_ptr<Intent> IntentFactory::create(const IntentType& type) {
 	

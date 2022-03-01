@@ -1,5 +1,19 @@
+/** @file WeatherIntent.cpp
+ *  @brief Predicting Weather intent.
+ *
+ *  Function definitions for predicting Weather intent corresponds to user input.
+ *
+ *  @author Hesham Noureldin
+ */
+
 #include "../inc/WeatherIntent.hpp"
 #include "../inc/defs.hpp"
+
+/**
+ * Set Weather Intent String depending on the user input.
+ *
+ * @param input user input for weather intent recognetion.
+ */
 
 void WeatherIntent::Set(const std::string &input)
 {

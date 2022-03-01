@@ -1,12 +1,34 @@
+/** @file IntentRecognizerSingleton.cpp
+ *  @brief Function definitions to abstract IntentFactory.
+ *
+ *  This contains the definitions
+ *  which abstract IntentFactory functions
+ *
+ *  @author Hesham Noureldin
+ */
+
+
 #include "../inc/IntentRecognizerSingleton.hpp"
 #include <algorithm>
 
+/**
+ * Get singelton class unique instance of IntentRecognizerSingleton.
+ *
+ * @return IntentRecognizerSingleton instance
+ */
 IntentRecognizerSingleton &IntentRecognizerSingleton::Instance()
 {
     static IntentRecognizerSingleton instance;
     return instance;
 }
 
+
+/**
+ * Get intent string depending on the user input.
+ *
+ * @param input string to be recognized.
+ * @return intent string predicted from the input.
+ */
 std::optional<std::string> IntentRecognizerSingleton::GetIntent(std::string &input)
 {
 

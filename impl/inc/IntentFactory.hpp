@@ -1,3 +1,12 @@
+/** @file IntentFactory.hpp
+ *  @brief Generate intent object.
+ *
+ *  Function prototypes for Generate intent object corresponds to user input.
+ *
+ *  @author Hesham Noureldin
+ */
+
+
 #ifndef _INTENTFACTORY_H_
 #define _INTENTFACTORY_H_
 
@@ -5,6 +14,12 @@
 #include "../inc/defs.hpp"
 #include <memory> 
 
+
+/**
+ * Class for generating Intent object.
+ *
+ * This class to generating Intent object corresponds to the type.
+ */
 
 class IntentFactory final {
 	public:
